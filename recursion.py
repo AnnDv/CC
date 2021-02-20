@@ -1,20 +1,19 @@
 import timeit
-import matplotlib.pyplot as plt
 
-state = """def Fibonacci(n):
-    if n < 0:
-        return ("Incorrect input")
-    elif n == 0:
-        return 0
-    elif n == 1:
-        return 1
+data_set = [1, 5, 9, 15, 20, 25, 40, 50]
+
+def Fibonacci(n):
+    if n <= 1:
+        return n
     else:
         return Fibonacci(n-1) + Fibonacci(n-2)
 
-Fibonacci(32)"""
 
-time = (timeit.repeat(stmt=state, number=1, repeat=5))
-for item in time:
-    print("{:.8f}".format(item))
-plt.plot(time, 'g-o')
-plt.show()
+for i in data_set:
+    start_time = timeit.default_timer()
+    Fibonacci(i)
+    print('Time for {:d}: {:.9f}'. format(i, timeit.default_timer() - start_time))
+
+
+
+
