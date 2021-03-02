@@ -1,4 +1,6 @@
-#!/Users/anadvorac/Documents/FAF/untitled/venv/bin/python
+#!/bin/sh
+'''exec' "/Users/anadvorac/Documents/FAF/anul 2/cc/lab3/venv/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
